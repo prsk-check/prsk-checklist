@@ -109,13 +109,15 @@ document.getElementById("captureButton").addEventListener("click", function () {
       link.download = "cardcheck.png";
       link.href = canvas.toDataURL("image/png");
     } else {
+      // JPG 선택 시 품질 0.9로 손실 압축
       link.download = "cardcheck.jpg";
-      link.href = canvas.toDataURL("image/jpeg");
+      link.href = canvas.toDataURL("image/jpeg", 0.9);
     }
 
     link.click();
   });
 });
+
 
 
 
