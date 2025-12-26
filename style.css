@@ -79,7 +79,7 @@ h1 {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(15, minmax(30px, 6vw)); /* 화면 크기에 따라 자동 조절 */
+  grid-template-columns: repeat(16, minmax(30px, 6vw)); /* 화면 크기에 따라 자동 조절 */
   gap: 0.5vw;
   justify-content: center;
 }
@@ -98,6 +98,7 @@ h1 {
   transform: scale(1.05);
   border-color: #666;
 }
+
 
 
 
