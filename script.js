@@ -98,32 +98,15 @@ document.getElementById('resetButton').addEventListener('click', () => {
 });
 
 
-// 캡쳐 기능 (PNG/JPG 선택 가능)
+// 캡쳐 기능 
 document.getElementById("captureButton").addEventListener("click", function () {
-  const format = document.getElementById("formatSelect").value; // select에서 선택한 값 읽기
-
-  html2canvas(document.body, { scale: 1 }).then((canvas) => {
+  html2canvas(document.body).then((canvas) => {
     const link = document.createElement("a");
-
-    if (format === "png") {
-      link.download = "cardcheck.png";
-      link.href = canvas.toDataURL("image/png");
-    } else {
-      // JPG 선택 시 품질 0.9로 손실 압축
-      link.download = "cardcheck.jpg";
-      link.href = canvas.toDataURL("image/jpeg", 0.9);
-    }
-
+    link.download = "cardcheck.png"; // 저장될 파일 이름
+    link.href = canvas.toDataURL("image/png");
     link.click();
   });
 });
-
-
-
-
-
-
-
 
 
 
