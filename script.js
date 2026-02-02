@@ -1,9 +1,24 @@
-// 이미지 파일명 배열 (on 상태만, off는 _ 붙인 걸로 자동 계산)
-const cat01Images = [
-  '0101', '0102', '0103', '0104', '0105', '0106', '0107', '0108', '0109', '0110', '0111', '0112', '0113', '0114', '0115', '0116', '0117', '0118', '0119', '0120', '0121', '0122', '0123', '0124', '0125', '0126', '0127'
-  // 추가로 넣고 싶은 이미지명 계속 이어서 적으면 됨
-];
+document.querySelectorAll('.tab-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const targetId = button.dataset.tab;
 
+    document.querySelectorAll('.tab-button').forEach(btn =>
+      btn.classList.remove('active')
+    );
+    button.classList.add('active');
+
+    document.querySelectorAll('.tab-content').forEach(content =>
+      content.classList.remove('active')
+    );
+    const targetContent = document.getElementById(targetId);
+    if (targetContent) {
+      targetContent.classList.add('active');
+    }
+  });
+});
+
+
+const cat01Images = ['0101', '0102', '0103', '0104', '0105', '0106', '0107', '0108', '0109', '0110', '0111', '0112', '0113', '0114', '0115', '0116', '0117', '0118', '0119', '0120', '0121', '0122', '0123', '0124', '0125', '0126', '0127'];
 const cat02Images = ['0201', '0202', '0203', '0204', '0205', '0206', '0207', '0208', '0209', '0210', '0211', '0212', '0213', '0214', '0215', '0216', '0217', '0218', '0219', '0220', '0221', '0222', '0223', '0224', '0225'];
 const cat03Images = ['0301', '0302', '0303', '0304', '0305', '0306', '0307', '0308', '0309', '0310', '0311', '0312', '0313', '0314', '0315', '0316', '0317', '0318', '0319', '0320', '0321', '0322', '0323', '0324', '0325', '0326'];
 const cat04Images = ['0401', '0402', '0403', '0404', '0405', '0406', '0407', '0408', '0409', '0410', '0411', '0412', '0413', '0414', '0415', '0416', '0417', '0418', '0419', '0420', '0421', '0422', '0423', '0424'];
@@ -19,17 +34,43 @@ const cat23Images = ['2301', '2302', '2303', '2304', '2305', '2306', '2307', '23
 const cat24Images = ['2401', '2402', '2403', '2404', '2405', '2406', '2407', '2408', '2409', '2410', '2411', '2412', '2413', '2414', '2415', '2416', '2417', '2418', '2419', '2420', '2421', '2422', '2423', '2424'];
 const cat31Images = ['3101', '3102', '3103', '3104', '3105', '3106', '3107', '3108', '3109', '3110', '3111', '3112', '3113', '3114', '3115', '3116', '3117', '3118', '3119', '3120', '3121', '3122', '3123', '3124', '3125', '3126'];
 const cat32Images = ['3201', '3202', '3203', '3204', '3205', '3206', '3207', '3208', '3209', '3210', '3211', '3212', '3213', '3214', '3215', '3216', '3217', '3218', '3219', '3220', '3221', '3222', '3223', '3224', '3225'];
-const cat33Images = ['3301', '3302', '3303', '3304', '3305', '3306', '3307', '3308', '3309', '3310', '3311', '3312', '3313', '3314', '3315', '3316', '3317', '3318', '3319', '3320', '3321', '3322', '3323', '3324', '3325'];
+const cat33Images = ['3301', '3302', '3303', '3304', '3305', '3306', '3307', '3308', '3309', '3310', '3311', '3312', '3313', '3314', '3315', '3316', '3317', '3318', '3319', '3320', '3321', '3322', '3323', '3324', '3325', '3326'];
 const cat34Images = ['3401', '3402', '3403', '3404', '3405', '3406', '3407', '3408', '3409', '3410', '3411', '3412', '3413', '3414', '3415', '3416', '3417', '3418', '3419', '3420', '3421', '3422', '3423', '3424', '3425', '3426'];
-const cat41Images = ['4101', '4102', '4103', '4104', '4105', '4106', '4107', '4108', '4109', '4110', '4111', '4112', '4113', '4114', '4115', '4116', '4117', '4118', '4119', '4120', '4121', '4122', '4123', '4124', '4125'];
+const cat41Images = ['4101', '4102', '4103', '4104', '4105', '4106', '4107', '4108', '4109', '4110', '4111', '4112', '4113', '4114', '4115', '4116', '4117', '4118', '4119', '4120', '4121', '4122', '4123', '4124', '4125', '4126'];
 const cat42Images = ['4201', '4202', '4203', '4204', '4205', '4206', '4207', '4208', '4209', '4210', '4211', '4212', '4213', '4214', '4215', '4216', '4217', '4218', '4219', '4220', '4221', '4222', '4223', '4224', '4225', '4226'];
 const cat43Images = ['4301', '4302', '4303', '4304', '4305', '4306', '4307', '4308', '4309', '4310', '4311', '4312', '4313', '4314', '4315', '4316', '4317', '4318', '4319', '4320', '4321', '4322', '4323', '4324', '4325', '4326'];
 const cat44Images = ['4401', '4402', '4403', '4404', '4405', '4406', '4407', '4408', '4409', '4410', '4411', '4412', '4413', '4414', '4415', '4416', '4417', '4418', '4419', '4420', '4421', '4422', '4423', '4424', '4425'];
 const cat51Images = ['5101', '5102', '5103', '5104', '5105', '5106', '5107', '5108', '5109', '5110', '5111', '5112', '5113', '5114', '5115', '5116', '5117', '5118', '5119', '5120', '5121', '5122', '5123', '5124', '5125', '5126'];
 const cat52Images = ['5201', '5202', '5203', '5204', '5205', '5206', '5207', '5208', '5209', '5210', '5211', '5212', '5213', '5214', '5215', '5216', '5217', '5218', '5219', '5220', '5221', '5222', '5223', '5224', '5225'];
 const cat53Images = ['5301', '5302', '5303', '5304', '5305', '5306', '5307', '5308', '5309', '5310', '5311', '5312', '5313', '5314', '5315', '5316', '5317', '5318', '5319', '5320', '5321', '5322', '5323', '5324', '5325', '5326'];
-const cat54Images = ['5401', '5402', '5403', '5404', '5405', '5406', '5407', '5408', '5409', '5410', '5411', '5412', '5413', '5414', '5415', '5416', '5417', '5418', '5419', '5420', '5421', '5422', '5423', '5424'];
+const cat54Images = ['5401', '5402', '5403', '5404', '5405', '5406', '5407', '5408', '5409', '5410', '5411', '5412', '5413', '5414', '5415', '5416', '5417', '5418', '5419', '5420', '5421', '5422', '5423', '5424', '5425'];
 
+const normal_cat01Images = ['0101', '0102', '0103', '0104', '0105', '0106', '0108', '0109', '0110', '0113', '0115', '0118', '0121'];
+const normal_cat02Images = ['0201', '0202', '0203', '0204', '0205', '0207', '0209', '0212', '0214', '0215', '0216', '0219', '0220', '0222', '0224'];
+const normal_cat03Images = ['0301', '0302', '0303', '0304', '0305', '0307', '0309', '0310', '0311', '0313', '0316', '0317', '0319', '0320', '0321', '0324', '0326'];
+const normal_cat04Images = ['0401', '0402', '0403', '0404', '0405', '0406', '0409', '0411', '0414', '0415', '0417', '0419', '0420', '0424'];
+const normal_cat05Images = ['0501', '0502', '0503', '0504', '0505', '0507', '0509', '0511', '0512', '0514', '0516', '0517', '0521', '0522', '0524', '0525'];
+const normal_cat06Images = ['0601', '0602', '0603', '0604', '0606', '0608', '0609', '0610', '0612', '0613', '0615', '0616', '0618', '0620', '0622', '0626'];
+const normal_cat11Images = ['1101', '1102', '1103', '1104', '1107', '1108', '1109', '1111', '1113', '1114', '1116', '1119', '1123', '1124'];
+const normal_cat12Images = ['1201', '1202', '1203', '1204', '1206', '1208', '1209', '1211', '1212', '1214', '1217', '1219', '1221'];
+const normal_cat13Images = ['1301', '1302', '1303', '1305', '1306', '1308', '1310', '1311', '1312', '1313', '1315', '1316', '1321', '1324', '1325'];
+const normal_cat14Images = ['1401', '1402', '1403', '1404', '1406', '1407', '1411', '1413', '1414', '1415', '1416', '1418', '1421', '1425'];
+const normal_cat21Images = ['2101', '2102', '2103', '2105', '2106', '2109', '2111', '2112', '2114', '2116', '2119', '2120', '2121', '2122'];
+const normal_cat22Images = ['2201', '2202', '2203', '2205', '2206', '2209', '2211', '2212', '2213', '2216', '2218', '2220', '2222', '2223', '2226'];
+const normal_cat23Images = ['2301', '2302', '2303', '2305', '2306', '2308', '2309', '2311', '2312', '2313', '2321', '2322', '2324', '2325'];
+const normal_cat24Images = ['2401', '2402', '2403', '2405', '2406', '2408', '2410', '2411', '2412', '2417', '2419', '2420', '2422', '2424'];
+const normal_cat31Images = ['3101', '3102', '3103', '3105', '3107', '3108', '3109', '3111', '3113', '3114', '3119', '3120', '3121', '3125', '3126'];
+const normal_cat32Images = ['3201', '3202', '3204', '3205', '3206', '3209', '3211', '3213', '3214', '3216', '3218', '3219', '3224', '3225'];
+const normal_cat33Images = ['3301', '3302', '3304', '3305', '3307', '3308', '3310', '3311', '3313', '3314', '3319', '3320', '3325'];
+const normal_cat34Images = ['3401', '3402', '3404', '3405', '3406', '3409', '3410', '3412', '3413', '3416', '3418', '3420', '3326'];
+const normal_cat41Images = ['4101', '4102', '4103', '4104', '4106', '4108', '4109', '4110', '4112', '4115', '4118', '4119', '4120', '4122'];
+const normal_cat42Images = ['4201', '4203', '4204', '4205', '4206', '4208', '4210', '4211', '4212', '4214', '4218', '4220', '4222', '4225'];
+const normal_cat43Images = ['4301', '4303', '4304', '4305', '4307', '4308', '4310', '4312', '4313', '4314', '4316', '4320', '4321', '4322', '4326'];
+const normal_cat44Images = ['4401', '4402', '4404', '4405', '4407', '4408', '4410', '4411', '4413', '4415', '4416', '4417', '4419', '4421'];
+const normal_cat51Images = ['5101', '5102', '5104', '5105', '5106', '5107', '5109', '5110', '5112', '5114', '5117', '5120', '5121', '5122', '5126'];
+const normal_cat52Images = ['5201', '5202', '5204', '5205', '5207', '5208', '5209', '5211', '5212', '5214', '5216', '5218', '5219', '5222', '5225'];
+const normal_cat53Images = ['5301', '5302', '5303', '5304', '5305', '5307', '5309', '5310', '5312', '5314', '5318', '5319', '5321', '5324', '5326'];
+const normal_cat54Images = ['5401', '5402', '5403', '5404', '5406', '5408', '5409', '5410', '5412', '5415', '5418', '5419', '5421', '5423'];
 
 function createCategoryImages(categoryId, imageNames) {
   const container = document.getElementById(categoryId);
@@ -38,7 +79,7 @@ function createCategoryImages(categoryId, imageNames) {
     const offSrc = `images/${name}_.png`;
 
     const img = document.createElement('img');
-    img.src = offSrc; // 초기 상태는 off
+    img.src = offSrc;
     img.dataset.on = onSrc;
     img.dataset.off = offSrc;
 
@@ -51,8 +92,6 @@ function createCategoryImages(categoryId, imageNames) {
   });
 }
 
-
-// 카테고리 생성
 createCategoryImages('cat01', cat01Images);
 createCategoryImages('cat02', cat02Images);
 createCategoryImages('cat03', cat03Images);
@@ -80,36 +119,57 @@ createCategoryImages('cat52', cat52Images);
 createCategoryImages('cat53', cat53Images);
 createCategoryImages('cat54', cat54Images);
 
+createCategoryImages('normal_cat01', normal_cat01Images);
+createCategoryImages('normal_cat02', normal_cat02Images);
+createCategoryImages('normal_cat03', normal_cat03Images);
+createCategoryImages('normal_cat04', normal_cat04Images);
+createCategoryImages('normal_cat05', normal_cat05Images);
+createCategoryImages('normal_cat06', normal_cat06Images);
+createCategoryImages('normal_cat11', normal_cat11Images);
+createCategoryImages('normal_cat12', normal_cat12Images);
+createCategoryImages('normal_cat13', normal_cat13Images);
+createCategoryImages('normal_cat14', normal_cat14Images);
+createCategoryImages('normal_cat21', normal_cat21Images);
+createCategoryImages('normal_cat22', normal_cat22Images);
+createCategoryImages('normal_cat23', normal_cat23Images);
+createCategoryImages('normal_cat24', normal_cat24Images);
+createCategoryImages('normal_cat31', normal_cat31Images);
+createCategoryImages('normal_cat32', normal_cat32Images);
+createCategoryImages('normal_cat33', normal_cat33Images);
+createCategoryImages('normal_cat34', normal_cat34Images);
+createCategoryImages('normal_cat41', normal_cat41Images);
+createCategoryImages('normal_cat42', normal_cat42Images);
+createCategoryImages('normal_cat43', normal_cat43Images);
+createCategoryImages('normal_cat44', normal_cat44Images);
+createCategoryImages('normal_cat51', normal_cat51Images);
+createCategoryImages('normal_cat52', normal_cat52Images);
+createCategoryImages('normal_cat53', normal_cat53Images);
+createCategoryImages('normal_cat54', normal_cat54Images);
 
-// 모두 선택 기능
+
 document.getElementById('selectAllButton').addEventListener('click', () => {
-  const allImages = document.querySelectorAll('.image-grid img');
+  const allImages = document.querySelectorAll('.tab-content.active .image-grid img');
   allImages.forEach(img => {
     img.src = img.dataset.on;
   });
 });
 
-// --- 전체 초기화 버튼 기능 ---
 document.getElementById('resetButton').addEventListener('click', () => {
-  const allImages = document.querySelectorAll('.image-grid img');
+  const allImages = document.querySelectorAll('.tab-content.active .image-grid img');
   allImages.forEach(img => {
     img.src = img.dataset.off;
   });
 });
 
 
-// 캡쳐 기능 
 document.getElementById("captureButton").addEventListener("click", function () {
   html2canvas(document.body).then((canvas) => {
     const link = document.createElement("a");
-    link.download = "cardcheck.png"; // 저장될 파일 이름
+    link.download = "cardcheck.png";
     link.href = canvas.toDataURL("image/png");
     link.click();
   });
 });
-
-
-
 
 
 
