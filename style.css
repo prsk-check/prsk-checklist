@@ -25,7 +25,6 @@
   display: block;
 }
 
-
 body {
   font-family: sans-serif;
   background: #f5f5f5;
@@ -33,9 +32,8 @@ body {
   padding: 20px;
 }
 
-
 h1 {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 #resetButton {
@@ -49,6 +47,7 @@ h1 {
   color: white;
   transition: background-color 0.2s;
 }
+
 #resetButton:hover {
   background-color: #e05555;
 }
@@ -64,6 +63,7 @@ h1 {
   color: white;
   transition: background-color 0.2s;
 }
+
 #selectAllButton:hover {
   background-color: #57a65a;
 }
@@ -83,13 +83,13 @@ h1 {
   background-color: #0099CC;
 }
 
-
 .category {
   display: flex;
   align-items: flex-start;
-  margin: 30px auto;
   justify-content: center;
-  gap: 10px;
+  margin: 8px auto !important;
+  gap: 5px;
+  width: fit-content;
 }
 
 .category-header {
@@ -100,29 +100,66 @@ h1 {
 }
 
 .category-icon {
-  width: 60px;
+  width: 45px;
   border-radius: 50%;
-  margin-bottom: 5px;
 }
 
 .image-grid {
   display: grid;
   grid-template-columns: repeat(17, minmax(30px, 6vw));
-  gap: 0.5vw;
+  gap: 0.3vw;
   justify-content: center;
 }
 
 .image-grid img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 4px; 
   cursor: pointer;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   transition: transform 0.1s, border-color 0.2s;
 }
-
 
 .image-grid img:hover {
   transform: scale(1.05);
   border-color: #666;
 }
+
+.hair-category {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 5px auto !important;
+  gap: 10px;
+  width: fit-content; 
+}
+
+.hair-category .category-header {
+  width: 50px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hair-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 45px) !important;
+  gap: 2px !important; 
+  width: 565px;
+  justify-content: start; 
+}
+
+.hair-grid img {
+  width: 45px;
+  height: 45px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.button-container {
+  margin-bottom: 20px;
+}
+
+
+
+
