@@ -1,4 +1,3 @@
-
 document.querySelectorAll('.tab-button').forEach(button => {
   button.addEventListener('click', () => {
     const targetId = button.dataset.tab;
@@ -17,6 +16,7 @@ document.querySelectorAll('.tab-button').forEach(button => {
     }
   });
 });
+
 
 const cat01Images = ['0101', '0102', '0103', '0104', '0105', '0106', '0107', '0108', '0109', '0110', '0111', '0112', '0113', '0114', '0115', '0116', '0117', '0118', '0119', '0120', '0121', '0122', '0123', '0124', '0125', '0126', '0127'];
 const cat02Images = ['0201', '0202', '0203', '0204', '0205', '0206', '0207', '0208', '0209', '0210', '0211', '0212', '0213', '0214', '0215', '0216', '0217', '0218', '0219', '0220', '0221', '0222', '0223', '0224', '0225', '0226'];
@@ -99,15 +99,42 @@ const hair_cat52Images = ['005201', '005202', '005203', '005204', '005205', '005
 const hair_cat53Images = ['005301', '005302', '005303', '005304', '005305', '005306', '005307', '005308'];
 const hair_cat54Images = ['005401', '005402', '005403', '005404', '005405', '005406', '005407', '005408', '005409'];
 
+const select_cat01Images = ['0101', '0102', '0103', '0104', '0105', '0106', '0108', '0109', '0110', '0113', '0115', '0118', '0121'];
+const select_cat02Images = ['0201', '0202', '0203', '0204', '0205', '0207', '0209', '0212', '0214', '0215', '0216', '0219', '0220', '0222', '0224'];
+const select_cat03Images = ['0301', '0302', '0303', '0304', '0305', '0307', '0309', '0310', '0311', '0313', '0316', '0317', '0319', '0320', '0321', '0324'];
+const select_cat04Images = ['0401', '0402', '0403', '0404', '0405', '0406', '0409', '0411', '0414', '0415', '0417', '0419', '0420', '0424'];
+const select_cat05Images = ['0501', '0502', '0503', '0504', '0505', '0507', '0509', '0511', '0512', '0514', '0516', '0517', '0521', '0522', '0524'];
+const select_cat06Images = ['0601', '0602', '0603', '0604', '0606', '0608', '0609', '0610', '0612', '0613', '0615', '0616', '0618', '0620', '0622'];
+const select_cat11Images = ['1101', '1102', '1103', '1104', '1107', '1108', '1109', '1111', '1113', '1114', '1116', '1119', '1123', '1124'];
+const select_cat12Images = ['1201', '1202', '1203', '1204', '1206', '1208', '1209', '1211', '1212', '1214', '1217', '1219', '1221'];
+const select_cat13Images = ['1301', '1302', '1303', '1305', '1306', '1308', '1310', '1311', '1312', '1313', '1315', '1316', '1321', '1324', '1325'];
+const select_cat14Images = ['1401', '1402', '1403', '1404', '1406', '1407', '1411', '1413', '1414', '1415', '1416', '1418', '1421', '1425'];
+const select_cat21Images = ['2101', '2102', '2103', '2105', '2106', '2109', '2111', '2112', '2114', '2116', '2119', '2120', '2121', '2122'];
+const select_cat22Images = ['2201', '2202', '2203', '2205', '2206', '2209', '2211', '2212', '2213', '2216', '2218', '2220', '2222', '2223'];
+const select_cat23Images = ['2301', '2302', '2303', '2305', '2306', '2308', '2309', '2311', '2312', '2313', '2321', '2322', '2324'];
+const select_cat24Images = ['2401', '2402', '2403', '2405', '2406', '2408', '2410', '2411', '2412', '2417', '2419', '2420', '2422', '2424'];
+const select_cat31Images = ['3101', '3102', '3103', '3105', '3107', '3108', '3109', '3111', '3113', '3114', '3119', '3120', '3121', '3125'];
+const select_cat32Images = ['3201', '3202', '3204', '3205', '3206', '3209', '3211', '3213', '3214', '3216', '3218', '3219', '3224'];
+const select_cat33Images = ['3301', '3302', '3304', '3305', '3307', '3308', '3310', '3311', '3313', '3314', '3319', '3320', '3325'];
+const select_cat34Images = ['3401', '3402', '3404', '3405', '3406', '3409', '3410', '3412', '3413', '3416', '3418', '3420'];
+const select_cat41Images = ['4101', '4102', '4103', '4104', '4106', '4108', '4109', '4110', '4112', '4115', '4118', '4119', '4120', '4122'];
+const select_cat42Images = ['4201', '4203', '4204', '4205', '4206', '4208', '4210', '4211', '4212', '4214', '4218', '4220', '4222', '4225'];
+const select_cat43Images = ['4301', '4303', '4304', '4305', '4307', '4308', '4310', '4312', '4313', '4314', '4316', '4320', '4321', '4322', '4326'];
+const select_cat44Images = ['4401', '4402', '4404', '4405', '4407', '4408', '4410', '4411', '4413', '4415', '4416', '4417', '4419', '4421'];
+const select_cat51Images = ['5101', '5102', '5104', '5105', '5106', '5107', '5109', '5110', '5112', '5114', '5117', '5120', '5121', '5122'];
+const select_cat52Images = ['5201', '5202', '5204', '5205', '5207', '5208', '5209', '5211', '5212', '5214', '5216', '5218', '5219', '5222'];
+const select_cat53Images = ['5301', '5302', '5303', '5304', '5305', '5307', '5309', '5310', '5312', '5314', '5318', '5319', '5321', '5324'];
+const select_cat54Images = ['5401', '5402', '5403', '5404', '5406', '5408', '5409', '5410', '5412', '5415', '5418', '5419', '5421', '5423'];
 
-function createCategoryImages(categoryId, imageNames, folder = 'images') { 
+
+function createCategoryImages(categoryId, imageNames, folder = 'images') {
   const container = document.getElementById(categoryId);
   imageNames.forEach(name => {
     const onSrc = `${folder}/${name}.png`;
     const offSrc = `${folder}/${name}_.png`;
 
     const img = document.createElement('img');
-    img.src = offSrc;
+    img.src = offSrc; 
     img.dataset.on = onSrc;
     img.dataset.off = offSrc;
 
@@ -202,6 +229,33 @@ createCategoryImages('hair_cat52', hair_cat52Images, 'hair');
 createCategoryImages('hair_cat53', hair_cat53Images, 'hair');
 createCategoryImages('hair_cat54', hair_cat54Images, 'hair');
 
+createCategoryImages('select_cat01', select_cat01Images);
+createCategoryImages('select_cat02', select_cat02Images);
+createCategoryImages('select_cat03', select_cat03Images);
+createCategoryImages('select_cat04', select_cat04Images);
+createCategoryImages('select_cat05', select_cat05Images);
+createCategoryImages('select_cat06', select_cat06Images);
+createCategoryImages('select_cat11', select_cat11Images);
+createCategoryImages('select_cat12', select_cat12Images);
+createCategoryImages('select_cat13', select_cat13Images);
+createCategoryImages('select_cat14', select_cat14Images);
+createCategoryImages('select_cat21', select_cat21Images);
+createCategoryImages('select_cat22', select_cat22Images);
+createCategoryImages('select_cat23', select_cat23Images);
+createCategoryImages('select_cat24', select_cat24Images);
+createCategoryImages('select_cat31', select_cat31Images);
+createCategoryImages('select_cat32', select_cat32Images);
+createCategoryImages('select_cat33', select_cat33Images);
+createCategoryImages('select_cat34', select_cat34Images);
+createCategoryImages('select_cat41', select_cat41Images);
+createCategoryImages('select_cat42', select_cat42Images);
+createCategoryImages('select_cat43', select_cat43Images);
+createCategoryImages('select_cat44', select_cat44Images);
+createCategoryImages('select_cat51', select_cat51Images);
+createCategoryImages('select_cat52', select_cat52Images);
+createCategoryImages('select_cat53', select_cat53Images);
+createCategoryImages('select_cat54', select_cat54Images);
+
 document.getElementById('selectAllButton').addEventListener('click', () => {
   const allImages = document.querySelectorAll('.tab-content.active .image-grid img');
   allImages.forEach(img => {
@@ -295,9 +349,24 @@ document.getElementById('importButton').addEventListener('click', () => {
     }
   });
 
+const selectImages = document.querySelectorAll('#tab-select-gacha .image-grid img');
+selectImages.forEach(img => {
+  const match = img.dataset.on.match(/\/(\d+)\.png/);
+  if (match) {
+    const imgId = match[1];
+    if (checked4StarIds.includes(imgId)) {
+      img.src = img.dataset.on;
+    } else {
+      img.src = img.dataset.off;
+    }
+  }
+});
+
+
   if (typeof saveChecklistState === 'function') {
     saveChecklistState();
   }
+
   alert("4성 탭의 체크 상태를 성공적으로 가져왔습니다!");
 });
 
@@ -328,6 +397,9 @@ function loadChecklistState() {
 
 
 loadChecklistState();
+
+
+
 
 
 
