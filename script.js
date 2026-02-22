@@ -309,7 +309,7 @@ function saveChecklistState() {
       checkedItems.push(img.dataset.on);
     }
   });
-  localStorage.setItem('prekChecklist', JSON.stringify(checkedItems));
+  localStorage.setItem('prskChecklist', JSON.stringify(checkedItems));
 }
 
 function loadChecklistState() {
@@ -328,6 +328,7 @@ function loadChecklistState() {
 
 
 loadChecklistState();
+
 
 
 
