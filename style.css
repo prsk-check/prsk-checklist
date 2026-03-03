@@ -25,6 +25,7 @@
   display: block;
 }
 
+
 body {
   font-family: sans-serif;
   background: #f5f5f5;
@@ -32,30 +33,14 @@ body {
   padding: 20px;
 }
 
+
 h1 {
   margin-bottom: 25px;
-}
-
-#resetButton {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-bottom: 30px;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  background-color: #ff6666;
-  color: white;
-  transition: background-color 0.2s;
-}
-
-#resetButton:hover {
-  background-color: #e05555;
 }
 
 #selectAllButton {
   padding: 10px 20px;
   font-size: 16px;
-  margin-left: 10px;
   cursor: pointer;
   border: none;
   border-radius: 6px;
@@ -63,16 +48,44 @@ h1 {
   color: white;
   transition: background-color 0.2s;
 }
-
 #selectAllButton:hover {
   background-color: #57a65a;
+}
+
+#resetButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff6666;
+  color: white;
+  transition: background-color 0.2s;
+}
+#resetButton:hover {
+  background-color: #e05555;
+}
+
+#invertButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff9800; 
+  color: white;
+  transition: background-color 0.2s;
+}
+#invertButton:hover {
+  background-color: #e68a00; 
 }
 
 #importButton {
   padding: 10px 20px;
   font-size: 16px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5px;
   cursor: pointer;
   border: none;
   border-radius: 6px;
@@ -80,7 +93,6 @@ h1 {
   color: white;
   transition: background-color 0.2s;
 }
-
 #importButton:hover {
   background-color: #7b1fa2;
 }
@@ -88,6 +100,7 @@ h1 {
 #captureButton {
   padding: 10px 20px;
   font-size: 16px;
+  margin-left: 5px;
   cursor: pointer;
   border: none;
   border-radius: 6px;
@@ -95,7 +108,6 @@ h1 {
   color: white;
   transition: background-color 0.2s;
 }
-
 #captureButton:hover {
   background-color: #0099CC;
 }
@@ -104,16 +116,16 @@ h1 {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin: 8px auto !important;
+  margin: 5px auto !important;
   gap: 5px;
   width: fit-content;
 }
 
 .category-header {
+width: 50px; 
+  flex-shrink: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 60px;
+  justify-content: center;
 }
 
 .category-icon {
@@ -123,15 +135,18 @@ h1 {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(17, minmax(30px, 6vw));
-  gap: 0.3vw;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 45px) !important;
+  gap: 2px !important;
+  width: 800px; 
+  justify-content: start;
+  text-align: left;
 }
 
 .image-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px; 
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 4px;
   cursor: pointer;
   border: 1px solid #ccc;
   transition: transform 0.1s, border-color 0.2s;
@@ -147,8 +162,8 @@ h1 {
   align-items: flex-start;
   justify-content: center;
   margin: 5px auto !important;
-  gap: 10px;
-  width: fit-content; 
+  gap: 5px;
+  width: fit-content;
 }
 
 .hair-category .category-header {
@@ -163,7 +178,7 @@ h1 {
   grid-template-columns: repeat(auto-fill, 45px) !important;
   gap: 2px !important; 
   width: 565px;
-  justify-content: start; 
+  justify-content: start;
 }
 
 .hair-grid img {
@@ -177,7 +192,49 @@ h1 {
   margin-bottom: 20px;
 }
 
+.unit-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
 
+.unit-group {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 350px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.unit-group .category {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.unit-group .image-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 45px) !important; 
+  gap: 4px !important;
+  justify-content: start;
+}
+
+.unit-group .image-grid img {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 4px;
+}
+
+.unit-group .category-icon {
+  width: 40px;
+  height: 40px;
+}
 
 
