@@ -177,7 +177,7 @@ width: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 45px) !important;
   gap: 2px !important; 
-  width: 565px;
+  width: 615px;
   justify-content: start;
 }
 
